@@ -1,6 +1,7 @@
 package com.qa.Utils;
 
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,11 +13,9 @@ import java.util.List;
 
 public class WebDriverWaits {
 
-    private WebDriver driver;
     private WebDriverWait wait;
 
     public WebDriverWaits(WebDriver driver, Duration duration) {
-        this.driver = driver;
         this.wait = new WebDriverWait(driver, duration);
     }
 
@@ -70,7 +69,7 @@ public class WebDriverWaits {
             return null;
         }
     }
-  
+
 
 //    public WebElement waitForFrameToBeAvailableAndSwitchToIt(By frameLocator) {
 //        return wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));

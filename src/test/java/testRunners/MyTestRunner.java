@@ -45,10 +45,10 @@ import io.cucumber.testng.CucumberOptions;
 import stepDefinitions.GooglePageSteps;
 
 @CucumberOptions(
-    features = {"src/test/resources/features"}, // Update path to your feature file directory
-    glue = {"com.qa.steps"},
-    plugin = {"pretty", "html:target/cucumber-reports"},
-    tags = "@google" // Add a tag for clarity (optional)
+    features = {"src/test/resources/features/dummyFeatures/google_search.feature"}, // Update path to your feature file directory
+    glue = {"stepDefinitions"},
+    plugin = {"pretty", "html:target/cucumber-reports"}
+//    tags = "@google" // Add a tag for clarity (optional)
 )
 public class MyTestRunner extends AbstractTestNGCucumberTests {
 

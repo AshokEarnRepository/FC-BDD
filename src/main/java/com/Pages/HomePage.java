@@ -12,6 +12,7 @@ import com.qa.Utils.EmailGenerator;
 import com.qa.Utils.PersonNameGenerator;
 import com.qa.Utils.ScrollUtils;
 import com.qa.Utils.WebDriverWaits;
+import com.qa.factory.DriverFactory;
 
 public class HomePage {
 	
@@ -72,7 +73,11 @@ public class HomePage {
 
 	// Methods to perform actions on Let's get started Section
 	public void VerifyGetStartedText() {
-	    WebElement GetStartedText = wait.waitForElementToBeVisible(By.xpath("//h2[@class='h2 mb-0']"));
+	    WebElement GetStartedText = wait.waitForElementToBeVisible(By.xpath("//p[text()='Are you ready to start your day?']"));
+	    
+//	    Thread.sleep(5000);
+//		String Text = DriverFactory.getDriver().findElement(By.xpath("//p[text()='Are you ready to start your day?']")).getText();
+//		System.out.println(">>> Accounts Section Not available instead this is diplayed: " +Text);
 
 	    String DashBoadText = GetStartedText.getText();
 

@@ -10,6 +10,7 @@ import java.util.Map;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 
 import com.Pages.AccountsPage;
@@ -23,6 +24,7 @@ import io.cucumber.java.en.When;
 
 public class AccountsPageSteps {
 	
+	WebDriver driver;
 	private LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
 	private AccountsPage accountspage;
 	
@@ -73,6 +75,12 @@ public class AccountsPageSteps {
 		softAssert.assertTrue(count==expectedSectionCount);
 		System.out.println(">>>getAccountsSectionCount: "+count);
 		Thread.sleep(2000);
+		
+		if(count==0) {
+			Thread.sleep(5000);
+			String Text = DriverFactory.getDriver().findElement(By.xpath("//p[text()='Are you ready to start your day?']")).getText();
+			System.out.println(">>> Accounts Section Not available instead this is diplayed: " +Text);
+		}
 	}
 	
 	@Then("Page title should be {string}")

@@ -10,7 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.Pages.InviteYourAdvisors;
 import com.qa.Utils.EmailGenerator;
+import com.qa.Utils.OtpExtractor;
 import com.qa.Utils.PersonNameGenerator;
+import com.qa.Utils.WebDriverWaits;
 import com.qa.factory.DriverFactory;
 
 public class InviteYourAdvisorsSteps {
@@ -76,6 +78,7 @@ public class InviteYourAdvisorsSteps {
 
     @When("I enter OTP and continue")
     public void enterOtpAndContinue() throws InterruptedException {
+    	
     	
     	invitePage.extractOtpFromSmstome();
 //        invitePage.ClickOnContinue();

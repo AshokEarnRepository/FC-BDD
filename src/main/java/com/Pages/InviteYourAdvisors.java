@@ -1,11 +1,14 @@
 package com.Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import com.qa.Utils.EmailGenerator;
+import com.qa.Utils.OtpExtractor;
 import com.qa.Utils.ScrollUtils;
 import com.qa.Utils.WebDriverWaits;
 
@@ -18,6 +21,7 @@ public class InviteYourAdvisors {
     private WebDriver driver;
     private WebDriverWaits waitUtil;
     private ScrollUtils scroll;
+    private WebDriverWaits wait;
     
     String AcceptUrl;
 
@@ -63,6 +67,7 @@ public class InviteYourAdvisors {
         this.driver = driver;
         this.waitUtil = new WebDriverWaits(driver, Duration.ofSeconds(20));
         this.scroll = new ScrollUtils(driver);
+        this.wait = new WebDriverWaits(driver, Duration.ofSeconds(20));
     }
 
     public String getInviteYourAdvisorsTitle() {
@@ -163,22 +168,43 @@ public class InviteYourAdvisors {
     	
         waitUtil.waitForElementToBeClickable(nameInput).sendKeys("Arjun");
         waitUtil.waitForElementToBeClickable(lastNameInput).sendKeys("Reddy");
-        waitUtil.waitForElementToBeClickable(emailInput).sendKeys("tpasingotp13@yopmail.com");
+        
+       WebElement emailField = waitUtil.waitForElementToBeClickable(emailInput);
+       emailField.clear();
+       emailField.sendKeys(EmailGenerator.generateRandomEmail());
         waitUtil.waitForElementToBeClickable(flagDropDown).click();
         waitUtil.waitForElementToBeClickable(phoneNumberInput).sendKeys("+17193045296");
         waitUtil.waitForElementToBeClickable(companyInput).sendKeys("Apollo");
-
-        
-      
         
         WebElement selectElement = waitUtil.waitForElementToBeClickable(selectDropdown);
         Select select = new Select(selectElement);
         select.selectByVisibleText("Medical");
 
-        waitUtil.waitForElementToBeClickable(checkbox).click();
-        waitUtil.waitForElementToBeClickable(continueButton).click();
+        WebElement checkBox = waitUtil.waitForElementToBeClickable(checkbox);
+        scroll.scrollIntoView(checkBox);
+        
+        try {
+            checkBox.click();
+        } catch (ElementClickInterceptedException e) {
+            System.out.println(">>> Element is not clickable");
+            // You can add alternative actions here, such as scrolling again or waiting for a brief moment before retrying the click.
+            // For example, scrolling again and clicking after a brief pause:
+            scroll.scrollToElement(checkBox);
+            try {
+                Thread.sleep(1000); // Adding a brief pause before retrying the click
+                checkBox.click();
+            } catch (InterruptedException | ElementClickInterceptedException ex) {
+                System.out.println(">>> Unable to click the element after retrying.");
+                // Additional error handling or logging can be added here.
+            }
+        }
+
+
+    
+        WebElement Continue =  waitUtil.waitForElementToBeClickable(continueButton);
+        scroll.scrollIntoView(Continue);
+        Continue.click();
     }
-   
 //    public void completeAdvisorInvitationFlow() throws InterruptedException {
 //        enterAdvisorDetails();
 ////        navigateToYopmail();
@@ -194,45 +220,52 @@ public class InviteYourAdvisors {
         waitUtil.waitForElementToBeClickable(continueButton2).click();
     }
     
-    
-   
-
+	 // Method to extract OTP
     public String extractOtpFromSmstome() throws InterruptedException {
-        ((JavascriptExecutor) driver).executeScript("window.open('', '_blank');");
-        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
-
-        driver.get("https://smstome.com/usa/phone/+17193045296/sms/6184");
-
-        driver.navigate().refresh();
-
-        Thread.sleep(3000);
-        driver.navigate().refresh();
-
-        Thread.sleep(3000);
-        driver.navigate().refresh();
-
-        WebElement  ElementOtp = waitUtil.waitForPresenceOfElement(otpElement);
-
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });", otpElement);
-
-        String otpText = ElementOtp.getText();
-        System.out.println(otpText);
-        int startIndex = otpText.indexOf("is ") + "is ".length();
-        System.out.println(startIndex);
-        int endIndex = otpText.indexOf(". It will be valid");
-        System.out.println(endIndex);
-        String otpValue = otpText.substring(startIndex, endIndex);
-        System.out.println(otpValue);
-
-        driver.switchTo().window(tabs.get(0));
-
-        WebElement otpField = waitUtil.waitForElementToBeClickable(otpfield);
-
-        otpField.sendKeys(otpValue);
-
-        return otpValue;
-    }
+    	 // Call the method to extract OTP
+        String extractedOtp = OtpExtractor.extractOtpFromSmstome(driver, wait);
+        
+        // Use the extracted OTP as needed
+        System.out.println("Extracted OTP: " + extractedOtp);
+		return extractedOtp;
+}
+    
+/*
+ * public String extractOtpFromSmstome() throws InterruptedException {
+ * ((JavascriptExecutor) driver).executeScript("window.open('', '_blank');");
+ * ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+ * driver.switchTo().window(tabs.get(1));
+ * 
+ * driver.get("https://smstome.com/usa/phone/+17193045296/sms/6184");
+ * 
+ * driver.navigate().refresh();
+ * 
+ * Thread.sleep(3000); driver.navigate().refresh();
+ * 
+ * Thread.sleep(3000); driver.navigate().refresh();
+ * 
+ * WebElement ElementOtp = waitUtil.waitForPresenceOfElement(otpElement);
+ * 
+ * ((JavascriptExecutor) driver).
+ * executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });"
+ * , otpElement);
+ * 
+ * String otpText = ElementOtp.getText(); System.out.println(otpText); int
+ * startIndex = otpText.indexOf("is ") + "is ".length();
+ * System.out.println(startIndex); int endIndex =
+ * otpText.indexOf(". It will be valid"); System.out.println(endIndex); String
+ * otpValue = otpText.substring(startIndex, endIndex);
+ * System.out.println(otpValue);
+ * 
+ * driver.switchTo().window(tabs.get(0));
+ * 
+ * WebElement otpField = waitUtil.waitForElementToBeClickable(otpfield);
+ * 
+ * otpField.sendKeys(otpValue);
+ * 
+ * return otpValue; }
+ */
+    
     public void ClickOnContinue() {
        WebElement continue1 = waitUtil.waitForElementToBeClickable(continueButton1);
         continue1.click();

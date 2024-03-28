@@ -14,8 +14,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-//	    features = {"src/test/resources/features/FileUploadTypes_PhotosVideos.feature"},
-	    features = {"src/test/resources/features/Calendar_NewEvent.feature"},
+	    features = {"src/test/resources/features/InviteAdvisor.feature"},
+//	    features = {"src/test/resources/features/"},
 	    glue = {"parallel", "AppHooks"},
 		
 		// Below two lines is for Parallel execution
@@ -31,6 +31,7 @@ import io.cucumber.testng.CucumberOptions;
 	    		
 	    		}
 	)
+
 public class ParallelRunTest extends AbstractTestNGCucumberTests {
 
 	private static WebDriver driver;
@@ -41,7 +42,7 @@ public class ParallelRunTest extends AbstractTestNGCucumberTests {
     public static void setUp() {
         driver = DriverFactory.getDriver();
     }
-//	
+	
 //	If you want to run from TestRunner only then uncomment this above code
     
     
@@ -72,14 +73,6 @@ public class ParallelRunTest extends AbstractTestNGCucumberTests {
     
     
 }
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

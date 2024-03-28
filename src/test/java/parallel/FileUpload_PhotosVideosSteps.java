@@ -120,7 +120,7 @@ public class FileUpload_PhotosVideosSteps {
     }
     
     @When("User clicks the added folder")
-    public void User_clicks_the_added_folder() {
+    public void User_clicks_the_added_folder() throws InterruptedException {
     	fileUploadPhotosVideos.clickOnAddedFolder();
     }
 

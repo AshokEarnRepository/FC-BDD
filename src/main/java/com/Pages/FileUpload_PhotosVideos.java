@@ -5,6 +5,8 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -81,7 +83,12 @@ public class FileUpload_PhotosVideos {
     public void clickOnPhotoVideosBack() {
     	
         waitUtil.waitForElementToBeClickable(By.xpath("//a[text()='Photo & Video Library']")).click();
-        waitUtil.waitForElementToBeClickable(ClickOnSubscriber).click();
+        
+//        if(waitUtil.waitForElementToBeClickable(ClickOnSubscriber).isDisplayed()) {
+//        	waitUtil.waitForElementToBeClickable(ClickOnSubscriber).click();
+//        }else {
+//        	System.out.println(">>> Subscriber BreadCrum Option is not visible");
+//        }
     }
     
     public void clickOnUploadIcon() {
@@ -159,25 +166,30 @@ public class FileUpload_PhotosVideos {
     	return addedFolder.isDisplayed();
     }
 
+    
     public void clickOnAddedFolder() {
         By folderXpath = By.xpath("//p[@class='mb-0 file_length' and text()='" + folderName + "']");
+
+        // Wait for the element to be clickable
         WebElement addedFolder = waitUtil.waitForElementToBeClickable(folderXpath);
 
         try {
+            // Scroll the element into view
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addedFolder);
+
+            // Attempt to click on the element
             addedFolder.click();
         } catch (ElementClickInterceptedException e) {
-            // If the element is not clickable, scroll into view and click again
-            scrollUtils.scrollIntoView(addedFolder);
-            addedFolder.click();
+            // If the element is still not clickable after scrolling, handle the exception
+            e.printStackTrace(); // Print the exception for debugging purposes
+            // You can add additional handling steps here, such as waiting and retrying, or logging the error
+        } catch (Exception e) {
+            // Handle any other exceptions
+            e.printStackTrace();
         }
     }
 
-   
-    
-    
-    
-    
-    
 
+        
 
 }

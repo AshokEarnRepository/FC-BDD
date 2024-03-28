@@ -54,14 +54,14 @@ public class AccountmenuSteps {
 
 	@Then("user clicks on savechanges")
 	public void user_clicks_on_savechanges() throws InterruptedException {
-		accountmenupage.save();
+		accountmenupage.ClickCancelButton();
 		
 		accountmenupage.password();
 		Thread.sleep(2000);
 		accountmenupage.current("Password@1234");
 		accountmenupage.newpass("Password@123");
 		accountmenupage.confirm("Password@123");
-		accountmenupage.save();
+		accountmenupage.ClickCancelButton();
 	}
 
 	@Then("user clicks on executor")

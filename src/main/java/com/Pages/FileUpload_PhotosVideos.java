@@ -168,7 +168,7 @@ public class FileUpload_PhotosVideos {
 
     
     public void clickOnAddedFolder() {
-        By folderXpath = By.xpath("//p[@class='mb-0 file_length' and text()='" + folderName + "']");
+        By folderXpath = By.xpath("//p[@class='mb-0 file_length' and text()='"+ folderName +"']");
 
         // Wait for the element to be clickable
         WebElement addedFolder = waitUtil.waitForElementToBeClickable(folderXpath);
@@ -188,6 +188,8 @@ public class FileUpload_PhotosVideos {
             e.printStackTrace();
         }
     }
+
+  
 
 
         

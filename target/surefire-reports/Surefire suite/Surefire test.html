@@ -1,0 +1,468 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/10/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Apr 19 15:47:41 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>247 seconds (247503 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunners.MyTestRunner.setUp()'><b>setUp</b><br>Test class: testRunners.MyTestRunner</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method setUp but has not been marked @Optional or defined
+
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 7 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace761416384", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace761416384'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeClass on method setUp but has not been marked @Optional or defined
+
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>-1713521862</td>
+<td>testRunners.MyTestRunner@707194ba</td></tr>
+<tr>
+<td title='testRunners.MyTestRunner.setUpClass()'><b>setUpClass</b><br>Test class: testRunners.MyTestRunner<br>Parameters: org.testng.TestRunner@7be9b8d0</td>
+<td><div><pre>java.lang.IllegalArgumentException: path must exist: C:\Users\Ashok\eclipse-workspace\FamilyCentral_ProdCucumber\src\test\resources\features\dummyFeatures\google_search.feature
+	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:49)
+	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
+	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
+	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
+	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
+	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
+	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:122)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace383935183", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace383935183'><pre>java.lang.IllegalArgumentException: path must exist: C:\Users\Ashok\eclipse-workspace\FamilyCentral_ProdCucumber\src\test\resources\features\dummyFeatures\google_search.feature
+	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:49)
+	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
+	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
+	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
+	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
+	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
+	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:122)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>testRunners.MyTestRunner@707194ba</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunners.ParallelRunTest.runScenario()'><b>runScenario</b><br>Test class: testRunners.ParallelRunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Account Menu Functionality of pwd change and Executor and Emergency contact", "Account Menu Functionality"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;a class=&quot;nav-link&quot; href=&quot;#passwordSecurity&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [75b6679e-071a-4c39-81c9-bdc6b330a656, clickElement {id=40d13421-8024-4796-bed7-4b72c8991272}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:20854, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18140, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:20854/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (75b6679e-071a-4c39-81c9-bdc6b330a656)] -&gt; xpath: //a[contains(text(),&apos;Password &amp; Security&apos;)]]
+Session ID: 75b6679e-071a-4c39-81c9-bdc6b330a656
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.Pages.accountmenupage.password(accountmenupage.java:114)
+	at parallel.AccountmenuSteps.user_clicks_on_password(AccountmenuSteps.java:38)
+	at ✽.user clicks on Password(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountMenu.feature:15)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1922558791", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1922558791'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;a class=&quot;nav-link&quot; href=&quot;#passwordSecurity&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [75b6679e-071a-4c39-81c9-bdc6b330a656, clickElement {id=40d13421-8024-4796-bed7-4b72c8991272}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:20854, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18140, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:20854/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (75b6679e-071a-4c39-81c9-bdc6b330a656)] -&gt; xpath: //a[contains(text(),&apos;Password &amp; Security&apos;)]]
+Session ID: 75b6679e-071a-4c39-81c9-bdc6b330a656
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.Pages.accountmenupage.password(accountmenupage.java:114)
+	at parallel.AccountmenuSteps.user_clicks_on_password(AccountmenuSteps.java:38)
+	at ✽.user clicks on Password(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountMenu.feature:15)
+</pre></div></td>
+<td>44</td>
+<td>testRunners.ParallelRunTest@6ab778a</td></tr>
+<tr>
+<td title='testRunners.ParallelRunTest.runScenario()'><b>runScenario</b><br>Test class: testRunners.ParallelRunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Accounts section count", "Account Page feature"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.Pages.AccountsPage.getAccountsSectionsList()&quot; because &quot;this.accountspage&quot; is null
+	at parallel.AccountsPageSteps.user_gets_account_section(AccountsPageSteps.java:59)
+	at ✽.user gets account section(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountPage.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace884883805", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace884883805'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.Pages.AccountsPage.getAccountsSectionsList()&quot; because &quot;this.accountspage&quot; is null
+	at parallel.AccountsPageSteps.user_gets_account_section(AccountsPageSteps.java:59)
+	at ✽.user gets account section(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountPage.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>testRunners.ParallelRunTest@6ab778a</td></tr>
+<tr>
+<td title='testRunners.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: testRunners.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a Custom Folder and Upload DOCX Files of Small, Medium and Large init", "File Management Feature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;login-email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace550458748", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace550458748'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;login-email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div></td>
+<td>24</td>
+<td>testRunners.FeatureRunner@22fcf7ab</td></tr>
+<tr>
+<td title='testRunners.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: testRunners.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a Custom Folder and Upload MP4 Files of Small, Medium and Large init", "File Management Feature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;login-email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace290996091", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace290996091'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;login-email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div></td>
+<td>24</td>
+<td>testRunners.FeatureRunner@22fcf7ab</td></tr>
+<tr>
+<td title='testRunners.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: testRunners.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a Custom Folder and Upload PDF Files of Small, Medium and Large init", "File Management Feature"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;p class=&quot;mb-0 file_length&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d, clickElement {id=983f8b1e-2034-4ce3-a1df-62810997e0e6}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d)] -&gt; xpath: //p[@class=&apos;mb-0 file_length&apos; and text()=&apos;t5QEZ386_Ashok&apos;]]
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.Pages.AddCustomFolder.clickOnAddedFolder(AddCustomFolder.java:108)
+	at parallel.AddCustomFolderSteps.the_user_clicks_and_opens_the_folder(AddCustomFolderSteps.java:84)
+	at ✽.the User clicks and opens the folder(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:19)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2137235141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2137235141'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;p class=&quot;mb-0 file_length&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d, clickElement {id=983f8b1e-2034-4ce3-a1df-62810997e0e6}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d)] -&gt; xpath: //p[@class=&apos;mb-0 file_length&apos; and text()=&apos;t5QEZ386_Ashok&apos;]]
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.Pages.AddCustomFolder.clickOnAddedFolder(AddCustomFolder.java:108)
+	at parallel.AddCustomFolderSteps.the_user_clicks_and_opens_the_folder(AddCustomFolderSteps.java:84)
+	at ✽.the User clicks and opens the folder(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:19)
+</pre></div></td>
+<td>38</td>
+<td>testRunners.FeatureRunner@22fcf7ab</td></tr>
+<tr>
+<td title='testRunners.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: testRunners.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a Custom Folder and Upload TXT Files of Small, Medium and Large init", "File Management Feature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;login-email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1938491917", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1938491917'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;login-email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div></td>
+<td>24</td>
+<td>testRunners.FeatureRunner@22fcf7ab</td></tr>
+<tr>
+<td title='testRunners.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: testRunners.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a Custom Folder and Upload JPG Files of Small, Medium and Large init", "File Management Feature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;login-email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace74076002", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace74076002'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;login-email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div></td>
+<td>25</td>
+<td>testRunners.FeatureRunner@22fcf7ab</td></tr>
+<tr>
+<td title='testRunners.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: testRunners.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a Custom Folder and Upload XLSX Files of Small, Medium and Large init", "File Management Feature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;login-email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1716378676", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1716378676'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;login-email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div></td>
+<td>23</td>
+<td>testRunners.FeatureRunner@22fcf7ab</td></tr>
+<tr>
+<td title='testRunners.ParallelRunTest.runScenario()'><b>runScenario</b><br>Test class: testRunners.ParallelRunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Accounts page title", "Account Page feature"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.Pages.AccountsPage.getAccountsPageTitle()&quot; because &quot;this.accountspage&quot; is null
+	at parallel.AccountsPageSteps.user_is_on_accounts_page(AccountsPageSteps.java:48)
+	at ✽.User is on Accounts page(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountPage.feature:12)
+</pre></div><a href='#' onClick='toggleBox("stack-trace527562909", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace527562909'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.Pages.AccountsPage.getAccountsPageTitle()&quot; because &quot;this.accountspage&quot; is null
+	at parallel.AccountsPageSteps.user_is_on_accounts_page(AccountsPageSteps.java:48)
+	at ✽.User is on Accounts page(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountPage.feature:12)
+</pre></div></td>
+<td>0</td>
+<td>testRunners.ParallelRunTest@6ab778a</td></tr>
+<tr>
+<td title='testRunners.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: testRunners.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a Custom Folder and Upload PNG Files of Small, Medium and Large init", "File Management Feature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[text()=&apos;Log In&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:76)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1011551351", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1011551351'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[text()=&apos;Log In&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:76)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+</pre></div></td>
+<td>82</td>
+<td>testRunners.FeatureRunner@22fcf7ab</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunners.ParallelRunTest.runScenario()'><b>runScenario</b><br>Test class: testRunners.ParallelRunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Adding Calendar MileStone of Birthday", "login page feature"</td>
+<td></td>
+<td>7</td>
+<td>testRunners.ParallelRunTest@6ab778a</td></tr>
+</table><p>
+</body>
+</html>

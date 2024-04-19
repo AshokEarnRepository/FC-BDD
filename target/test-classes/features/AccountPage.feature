@@ -2,6 +2,7 @@
 Feature: Account Page feature
   I want to use this template for my feature file
   
+  @Regression
  Scenario: Accounts page title
  
   Given User is already logged in to application
@@ -12,11 +13,12 @@ Feature: Account Page feature
   And user gets the title of the page
   Then page title should be "https://www.familycentral.com"
 
+ @Regression
  Scenario: Accounts section count
  
-  Given User is already logged in to application
-  |username            |password    |
-  |ashokmarch12@yopmail.com|Password@123|
+  #Given User is already logged in to application
+  #|username            |password    |
+  #|ashokmarch12@yopmail.com|Password@123|
  
     #Given User is on Accounts pag
     

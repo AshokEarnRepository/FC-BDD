@@ -3,10 +3,12 @@ package com.Pages;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,12 +17,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.github.javafaker.Faker;
 import com.qa.Utils.OtpExtractor;
+import com.qa.Utils.ScrollUtils;
 import com.qa.Utils.WebDriverWaits;
 
 public class LegacyMessageVideoRecord {
 
 	private WebDriver driver;
 	WebDriverWaits wait;
+	private ScrollUtils scroll;
 	
 	private static String year = "2024"; 
 	private String month = "March";
@@ -51,6 +55,8 @@ public class LegacyMessageVideoRecord {
 	    private By nextButton = By.xpath("//button[normalize-space()='Next']");
 	    private By messageTitleInput = By.xpath("//input[@id='msg_title']");
 	    private By NextBtn_MessageTitle = By.xpath("//button[@class='primary_btn']");
+	  
+	    private By StartAudioRecordingBtn = By.xpath("//button[@class='primary_btn' and text()='Start Recording']");
 	    private By myFamilyButton = By.xpath("//p[normalize-space()='My Family']");
 	    private By SelectAllButton = By.xpath("//input[@id='select_all']");
 	    private By NextBtn_afterSelectAll = By.xpath("//button[normalize-space()='Next']");
@@ -68,6 +74,7 @@ public class LegacyMessageVideoRecord {
 	public LegacyMessageVideoRecord(WebDriver driver) {
 			this.driver = driver;
 			this.wait = new WebDriverWaits(driver, Duration.ofSeconds(20));
+			this.scroll = new ScrollUtils(driver);
 		}
  
 		public String getLegacyMessageTitle() {
@@ -90,25 +97,31 @@ public class LegacyMessageVideoRecord {
 }
 
 
-	    public void clickCreateFirstMessage() {
-	        // Wait for the element to be clickable
-	        WebElement createFirstMsg = wait.waitForElementToBeClickable(createFirstMessageButton);
+	    public void clickCreateFirstMessage() throws InterruptedException {
+	        try {
+	            // Check if "Create" option is available
+	            WebElement createFirstMsg = wait.waitForElementToBeClickable(createFirstMessageButton);
 
-	        // Check if "Create" option is available
-	        if (driver.findElements(NewMessageBtn).isEmpty()) {
-	            // If "Create" option is not available, click on "New Message" option
-	            WebElement newMessageBtn = wait.waitForElementToBeClickable(NewMessageBtn);
-	            newMessageBtn.click();
-	        } else {
-	            // If "Create" option is available, scroll the element into view
-	            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });", createFirstMsg);
-
-	            // Click the "Create" option after it's in view
-	            createFirstMsg.click();
+	            if (createFirstMsg.isDisplayed()) {
+	                // If "Create" option is available, scroll the element into view
+	                scroll.scrollIntoView(createFirstMsg);
+	                // Click the "Create" option after it's in view
+	                createFirstMsg.click();
+	            } else {
+	                // If "Create" option is not available, click on "New Message" option
+	                WebElement newMessageBtn = wait.waitForElementToBeClickable(NewMessageBtn);
+	                scroll.scrollIntoView(newMessageBtn);
+	                newMessageBtn.click();
+	            }
+	        } catch (StaleElementReferenceException e) {
+	            // Handle StaleElementReferenceException if the element becomes stale during execution
+	            // You may choose to retry the operation or handle it as per your application's requirements
+	            e.printStackTrace();
+	        } catch (Exception e) {
+	            // Handle any other exceptions that may occur
+	            e.printStackTrace();
 	        }
 	    }
-
-
 
 	    public void clickRecordOneHere() {
 	    	WebElement recordOneHere=  wait.waitForElementToBeClickable(recordOneHereButton);
@@ -119,10 +132,19 @@ public class LegacyMessageVideoRecord {
 	    	WebElement recordVideoMessageBtn = wait.waitForElementToBeClickable(recordVideoMessageButton);
 	    	recordVideoMessageBtn.click();
 	    }
+	    public void clickRecordAudioMessage() {
+	    	WebElement recordAudio = wait.waitForElementToBeClickable(By.xpath("//div[@class='audio_content']/p"));
+	    	recordAudio.click();
+	    }
+	    public void clickRecordAudioStart() {
+	    	WebElement recordAudioStart = wait.waitForElementToBeClickable(StartAudioRecordingBtn);
+	    	recordAudioStart.click();
+	    }
 
-	    public void clickRecordNow() {
+	    public void clickRecordNow() throws InterruptedException {
 	    	WebElement recordNowBtn = wait.waitForElementToBeClickable(recordNowButton);
 	    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });", recordNowBtn);
+	    	Thread.sleep(2000);
 	    	recordNowBtn.click();
 	        
 	    }
@@ -142,19 +164,12 @@ public class LegacyMessageVideoRecord {
 		    public void clickNext() throws InterruptedException {
 		    	Thread.sleep(3000);
 		        WebElement nextBtnoption = wait.waitForElementToBeClickable(nextButton);
+		        scroll.scrollToElement(nextBtnoption);
 		        
 		        nextBtnoption.click();
 		    }
 		    
-		    
-		    
-		    
-		    
-		    
-		    
  //Entering Random Title	    
-
-		    
 
 		    // Other existing methods...
 
@@ -204,14 +219,6 @@ public class LegacyMessageVideoRecord {
 		        specificDateLabelElement.click();
 		    }
 
-
-		    
-		    
-		    
-		    
-		    
-		    
-		    
 		    
 		    
 
@@ -223,7 +230,7 @@ public class LegacyMessageVideoRecord {
 		            Select yearSelect = new Select(yearDropdown);
 
 		            // Generate a random year between 2020 and 2030 (adjust the range as needed)
-		            String randomYear = Integer.toString(faker.number().numberBetween(2024, 2030));
+		            String randomYear = Integer.toString(faker.number().numberBetween(2024, 2027));
 
 		            yearSelect.selectByValue(randomYear);
 		            System.out.println(randomYear);
@@ -240,7 +247,7 @@ public class LegacyMessageVideoRecord {
 		            System.out.println("Print months :"+monthOptions);
 
 		            // Generate a random index to select a month
-		            int randomIndex = faker.number().numberBetween(0, monthOptions.size());
+		            int randomIndex = faker.number().numberBetween(1, monthOptions.size());
 
 		            // Select the month at the random index
 		            monthSelect.selectByIndex(randomIndex);
@@ -270,25 +277,35 @@ public class LegacyMessageVideoRecord {
 //		            System.out.println("Selected day: " + selectedDay);
 //		        }
 		        
-		        public void selectDayFromDropdown() throws InterruptedException {
+		        public void selectRandomEnabledDayFromDropdown() throws InterruptedException {
 		            try {
-		                // Wait for the day dropdown to be visible
+		                // Wait for the day dropdown to be visible and clickable
 		                WebElement dayDropdown = wait.waitForElementToBeClickable(specificDayDropdown);
+		                Thread.sleep(3000);
 		                
-		                Thread.sleep(5000);
-
-		                // Use sendKeys to select the third option in the day dropdown
-//		                dayDropdown.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-//		                dayDropdown
-
-		                // Get the selected day value for printing
-		                String selectedDay = dayDropdown.getAttribute("value");
-
+		                // Create a Select object for the dropdown
+		                Select dayDrop = new Select(dayDropdown);
+		                
+		                // Get all the options from the dropdown
+		                List<WebElement> options = dayDrop.getOptions();
+		                
+		                // Filter out the enabled options
+		                List<WebElement> enabledOptions = options.stream().filter(WebElement::isEnabled).toList();
+		                
+		                // Randomly select one of the enabled options
+		                Random random = new Random();
+		                WebElement randomEnabledOption = enabledOptions.get(random.nextInt(enabledOptions.size()));
+		                
+		                // Get the text of the selected day for printing
+		                String selectedDay = randomEnabledOption.getText();
+		                
+		                // Select the randomly chosen option from the dropdown
+		                dayDrop.selectByVisibleText(selectedDay);
+		                
 		                System.out.println("Selected day: " + selectedDay);
 		            } catch (Exception e) {
 		                e.printStackTrace(); // Handle any exceptions that may occur
 		            }
-		            
 		        }
 
 

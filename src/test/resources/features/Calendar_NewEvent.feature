@@ -2,6 +2,7 @@
 Feature: Calendar Event Creation with Recurring and Reminder Options
   
   
+  @Regression
   Scenario: User Creates Monthly Recurring Calendar Event with Reminder
   
     Given User is already logged in to application

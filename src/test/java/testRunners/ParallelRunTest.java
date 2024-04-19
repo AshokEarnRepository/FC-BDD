@@ -14,7 +14,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-	    features = {"src/test/resources/features/InviteAdvisor.feature"},
+	    features = {"src/test/resources/AllRunFeatures/"},
 //	    features = {"src/test/resources/features/"},
 	    glue = {"parallel", "AppHooks"},
 		
@@ -22,7 +22,7 @@ import io.cucumber.testng.CucumberOptions;
 //		features = {"src/test/resources/parallel/"},
 //	    glue = {"parallel"},
 	    
-//	    tags = "@login", // Include scenarios with any of these tags,
+//	    tags = " @Regression", // Include scenarios with any of these tags,
 //	    dryRun=true,
 	    publish = true,
 	    plugin   = {"pretty", "html:target/CucumberReport.html",
@@ -44,7 +44,6 @@ public class ParallelRunTest extends AbstractTestNGCucumberTests {
     }
 	
 //	If you want to run from TestRunner only then uncomment this above code
-    
     
 	//crossBrowser SetUp>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	

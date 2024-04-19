@@ -22,7 +22,7 @@ public class PersonalVault_ShareUploadLink {
     private By clickOnPersonalVault = By.xpath("//a[@class='nav-link']/child::span[text()='Personal Vault']");
 
     // File Sharing Elements:
-    private By ShareUploadOption = By.xpath("/html/body/app-root/div/app-user/div/div[2]/div[3]/app-files/div[2]/div[1]/app-folder-list/div[2]/div[1]/div/button/span/img");
+    private By ShareUploadOption = By.xpath("(//span[@class='options-icon'])[2]");
     private By shareForm = By.xpath("//button[text()='Share']");
     // User Information:
     private By firstname = By.xpath("//input[@placeholder='First Name']");
@@ -37,13 +37,14 @@ public class PersonalVault_ShareUploadLink {
 //Email Interaction:
     private By enteremail = By.xpath("//input[@id='login']");
     private By clickArrow = By.xpath("//*[@id=\"refreshbut\"]/button/i");
-    private By emaillink = By.xpath("//span[text()='Family Central']/following::div[contains(text(),'You an Invitation to Family Central')]");
+    private By emaillink = By.xpath("(//span[text()='Family Central']/following::div[@class='lms' and contains(text(),'Invited You to Share Files')])[1]");
   //Email Verification and Authentication:
     private By frame = By.xpath("//*[@id='ifmail']");
-    private By signin = By.xpath("//*[@id='mail']/div/center/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[6]/td/table/tbody/tr/td/div/a/span");
+    private By signin = By.xpath("//span[text()='Sign in now']");
     private By otp = By.xpath("/html/body/main/div/div/div/center/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[6]/td");
-    private By entercode = By.xpath("  //input[@class='otp-input ng-pristine ng-valid ng-star-inserted ng-touched']");
+    private By entercode = By.xpath("//input[@class='otp-input ng-pristine ng-valid ng-star-inserted ng-touched']");
     private By submit = By.xpath("//button[@type='submit']");
+    private By REFRESH_BTN = By.xpath("//button[@id='refresh']");
 //File Upload:
     private By file = By.xpath("//span[text()='Select a file to upload']");
     private By send = By.xpath("//button[text()=' Send ']");
@@ -87,8 +88,10 @@ public class PersonalVault_ShareUploadLink {
 				return extractedOtp;
 		}
 
-    public void sharefile() {
-        wait.waitForVisibilityOfElement(ShareUploadOption).click();
+    public void sharefile() throws InterruptedException {
+    	WebElement clickUpload = wait.waitForVisibilityOfElement(ShareUploadOption);
+    			Thread.sleep(3000);
+    			clickUpload.click();
     }
 
     public void firstname() {
@@ -112,6 +115,7 @@ public class PersonalVault_ShareUploadLink {
     }
 
     public void us() {
+    	
         wait.waitForVisibilityOfElement(us).click();
     }
 
@@ -131,11 +135,12 @@ public class PersonalVault_ShareUploadLink {
         wait.waitForVisibilityOfElement(shareForm).click();
     }
 
-    public void yopmail() {
-        ((JavascriptExecutor) driver).executeScript("window.open('', '_blank');");
+    public void yopmail() throws InterruptedException {
+
+    	((JavascriptExecutor) driver).executeScript("window.open('', '_blank');");
         driver.switchTo().window(new ArrayList<>(driver.getWindowHandles()).get(1));
         driver.get("https://yopmail.com/en/");
-        driver.navigate().refresh();
+//        driver.navigate().refresh();
     }
 
     public void enteremail() {
@@ -148,11 +153,13 @@ public class PersonalVault_ShareUploadLink {
 
     public void frame() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        wait.waitForVisibilityOfElement(frame).click();
+        WebElement iframe = wait.waitForVisibilityOfElement(frame);
+       driver.switchTo().frame(iframe);
+       
     }
 
     public void emaillink() {
-        driver.navigate().refresh();
+        wait.waitForElementToBeClickable(REFRESH_BTN);
         wait.waitForVisibilityOfElement(emaillink).click();
     }
 

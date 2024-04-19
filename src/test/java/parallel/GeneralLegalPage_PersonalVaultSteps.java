@@ -24,22 +24,47 @@ public class GeneralLegalPage_PersonalVaultSteps {
         generalLegalPages.addfile();
     }
  
-    @And("user clicks on upload file")
-    public void user_clicks_on_upload_file() throws InterruptedException {
+    @And("user clicks on upload fileOne")
+    public void user_clicks_on_upload_fileOne() throws InterruptedException {
         filePath = getFilepathForFileNumber(1);
         System.out.println(">>upload file 1: " +filePath);
-        generalLegalPages.uploadfile(filePath);
+        generalLegalPages.uploadFile(filePath);
    }
  
   @When("user clicks on upload file{int}")
    public void user_clicks_on_upload_file(int fileNumber) throws InterruptedException {
-        filePath = getFilepathForFileNumber(fileNumber);
+        filePath = getFilepathForFileNumber(1);
        System.out.println(">>upload file : " +filePath);
-        generalLegalPages.uploadfile(filePath);
+//        generalLegalPages.uploadfile();
+       
+        generalLegalPages.uploadFile(filePath);
    }
+  
+//  @And("user clicks on upload file")
+//  public void user_clicks_on_upload_file1() throws InterruptedException {
+//      filePath = getFilepathForFileNumber(1);
+//      System.out.println(">>upload file 1: " +filePath);
+//      generalLegalPages.uploadfile(filePath);
+// }
+  
+  
+  @And("user clicks on upload file")
+  public void user_clicks_on_upload_file1() throws InterruptedException {
+      filePath = getFilepathForFileNumber(1);
+      System.out.println(">>upload file 1: " +filePath);
+      generalLegalPages.uploadFile(filePath);
+ }
+  
+  
     
+//  @And("user clicks on upload file")
+//	public void user_clicks_on_upload_file() throws InterruptedException {
+//		 String filePath = "C:\\Users\\Ashok\\Documents\\Medium_sample-pdf-download-10-mb.pdf";
+//		 generalLegalPages.uploadFile(filePath);
+//}	
  
- 
+
+
    @Then("User should see the {string} Message")
    public void user_should_see_the_message(String filename) throws InterruptedException {
         generalLegalPages.verify();

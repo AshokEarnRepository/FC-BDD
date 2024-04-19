@@ -4,7 +4,7 @@ Feature: PersonalVault General Legal Information of Uploading Different file typ
   
   #Background: 
   
-   @tag0
+   @tag0 @Regression
    Scenario: General Legal upload PNG file upload
    
    Given User is already logged in to application
@@ -22,7 +22,7 @@ Feature: PersonalVault General Legal Information of Uploading Different file typ
   
   
   @tag1
- 
+  @Regression
 Scenario: General Legal upload PDF file upload
   Given User clicks on personal vault
   #And User navigates to smstome website
@@ -32,7 +32,7 @@ Scenario: General Legal upload PDF file upload
   Then User should see the "Uploaded Successfully" Message
  
  
-  @tag2
+  @tag2 @Regression
  Scenario: General Legal upload JPG file upload
   Given User clicks on personal vault
   #And User navigates to smstome website
@@ -41,7 +41,7 @@ Scenario: General Legal upload PDF file upload
   And user clicks on upload file2
   Then User should see the "Uploaded Successfully" Message
   
-  @tag3
+  @tag3 @Regression
  Scenario: General Legal upload XLSX file upload
   Given User clicks on personal vault
   #And User navigates to smstome website
@@ -51,7 +51,7 @@ Scenario: General Legal upload PDF file upload
   Then User should see the "Uploaded Successfully" Message
   
   
-  #@tag4
+  @Regression
 Scenario: General Legal upload JPEG file upload
   Given User clicks on personal vault
   #And User navigates to smstome website
@@ -61,8 +61,7 @@ Scenario: General Legal upload JPEG file upload
   Then User should see the "Uploaded Successfully" Message
   
   
-  
-  #@tag5
+  @Regression
     Scenario: General Legal upload TXT file upload
     Given User clicks on personal vault
    #And User navigates to smstome website

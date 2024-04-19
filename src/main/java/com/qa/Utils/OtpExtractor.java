@@ -24,7 +24,7 @@ public class OtpExtractor {
         driver.switchTo().window(tabs.get(1));
         
         // Navigate to the OTP extraction page
-        driver.get("https://smstome.com/usa/phone/13153558445/sms/6255");
+        driver.get("https://smstome.com/usa/phone/18037212058/sms/6414");
 
         // Wait for the OTP element to be present
         WebElement otpElement = wait.waitForPresenceOfElement(By.xpath("//tbody/tr[1]/td[3]"));

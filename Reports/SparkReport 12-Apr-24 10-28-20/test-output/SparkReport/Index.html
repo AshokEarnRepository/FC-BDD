@@ -1,0 +1,2932 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Apr 12, 2024 10:28:20 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Apr 12, 2024 10:28:20 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Apr 12, 2024 10:30:03 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>4</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>4</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='100%'><b>15</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> steps passed</small></div>
+<div>
+<small data-tooltip='25%'><b>28</b> steps failed,
+<b>82</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Files Add Custom Folder and Uploading Files in it":102.09,"PersonalVault General Legal Information of Uploading Different file types":0.202,"Google Search Page Title":0.002,"Google Search":0.002
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@feature</td>
+<td>0</td>
+<td>13</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag5</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag2</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag4</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@docx</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@xlsx</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@jpg</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@txt</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@png</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag3</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@pdf</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@mp4</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>AppName</td>
+<td>FamilyCentral</td>
+</tr>
+<tr>
+<td>user</td>
+<td>Ashok</td>
+</tr>
+<tr>
+<td>build</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 4,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 15,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 28,
+warningGrandChild: 0,
+skipGrandChild: 82,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@feature</a><a class="dropdown-item" href="#">@tag5</a><a class="dropdown-item" href="#">@tag2</a><a class="dropdown-item" href="#">@tag4</a><a class="dropdown-item" href="#">@docx</a><a class="dropdown-item" href="#">@xlsx</a><a class="dropdown-item" href="#">@tag0</a><a class="dropdown-item" href="#">@jpg</a><a class="dropdown-item" href="#">@txt</a><a class="dropdown-item" href="#">@tag1</a><a class="dropdown-item" href="#">@png</a><a class="dropdown-item" href="#">@tag3</a><a class="dropdown-item" href="#">@pdf</a><a class="dropdown-item" href="#">@mp4</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Files Add Custom Folder and Uploading Files in it</p>
+            <p class="text-sm">
+              <span>10:28:21 am</span> / <span>00:01:42:090</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Files Add Custom Folder and Uploading Files in it</h5>
+<span class='badge badge-success'>04.12.2024 10:28:21 am</span>
+<span class='badge badge-danger'>04.12.2024 10:30:03 am</span>
+<span class='badge badge-default'>00:01:42:090</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Add a Custom Folder and Upload PDF Files of Small, Medium and Large init</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.AccountsPageSteps.user_is_already_logged_in_to_application(io.cucumber.datatable.DataTable)">
+                <span>Given User is already logged in to application</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>ashokmarch12@yopmail.com</td><td>Password@123</td></tr></table>
+      </div>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[text()='Log In']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.LoginPage.doLogin(LoginPage.java:76)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/AddCustomFolder_Files.feature:7)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files()">
+                <span>Given the User clicks on Family Access Files</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_add_folder()">
+                <span>When the User clicks on Add Folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_enters_the_folder_name_as_into()">
+                <span>And the User enters the folder name into Folder name field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_the_button()">
+                <span>And the User clicks on the Add button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_should_see_a_success_popup_with_the_message(java.lang.String)">
+                <span>Then the User should see a success popup with the message "added successfully"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_close_user_guide()">
+                <span>And the User clicks on close user guide</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_verifies_the_added_custom_folder()">
+                <span>And the User verifies the added custom folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_and_opens_the_folder()">
+                <span>And the User clicks and opens the folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.user_uploads_PDF_into_the_that_specific_folder()">
+                <span>And User uploads PDF file into the that specific folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="16"><span class="badge log fail-bg mr-2">Fail</span>Add a Custom Folder and Upload DOCX Files of Small, Medium and Large init</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files()">
+                <span>Given the User clicks on Family Access Files</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']//span[contains(text(),'Family Access Files')]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.Pages.AddCustomFolder.clickOnFamilyAccessFiles(AddCustomFolder.java:54)
+	at parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files(AddCustomFolderSteps.java:38)
+	at ✽.the User clicks on Family Access Files(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/AddCustomFolder_Files.feature:24)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_add_folder()">
+                <span>When the User clicks on Add Folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_enters_the_folder_name_as_into()">
+                <span>And the User enters the folder name into Folder name field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_the_button()">
+                <span>And the User clicks on the Add button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_should_see_a_success_popup_with_the_message(java.lang.String)">
+                <span>Then the User should see a success popup with the message "added successfully"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_close_user_guide()">
+                <span>And the User clicks on close user guide</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_verifies_the_added_custom_folder()">
+                <span>And the User verifies the added custom folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_and_opens_the_folder()">
+                <span>And the User clicks and opens the folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.user_uploads_DOCX_into_the_that_specific_folder()">
+                <span>And User uploads DOCX file into the that specific folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="29"><span class="badge log fail-bg mr-2">Fail</span>Add a Custom Folder and Upload TXT Files of Small, Medium and Large init</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files()">
+                <span>Given the User clicks on Family Access Files</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']//span[contains(text(),'Family Access Files')]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.Pages.AddCustomFolder.clickOnFamilyAccessFiles(AddCustomFolder.java:54)
+	at parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files(AddCustomFolderSteps.java:38)
+	at ✽.the User clicks on Family Access Files(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/AddCustomFolder_Files.feature:37)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_add_folder()">
+                <span>When the User clicks on Add Folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_enters_the_folder_name_as_into()">
+                <span>And the User enters the folder name into Folder name field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_the_button()">
+                <span>And the User clicks on the Add button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_should_see_a_success_popup_with_the_message(java.lang.String)">
+                <span>Then the User should see a success popup with the message "added successfully"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_close_user_guide()">
+                <span>And the User clicks on close user guide</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_verifies_the_added_custom_folder()">
+                <span>And the User verifies the added custom folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_and_opens_the_folder()">
+                <span>And the User clicks and opens the folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.user_uploads_TXT_into_the_that_specific_folder()">
+                <span>And User uploads TXT file into the that specific folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="42"><span class="badge log fail-bg mr-2">Fail</span>Add a Custom Folder and Upload XLSX Files of Small, Medium and Large init</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files()">
+                <span>Given the User clicks on Family Access Files</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']//span[contains(text(),'Family Access Files')]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.Pages.AddCustomFolder.clickOnFamilyAccessFiles(AddCustomFolder.java:54)
+	at parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files(AddCustomFolderSteps.java:38)
+	at ✽.the User clicks on Family Access Files(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/AddCustomFolder_Files.feature:50)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_add_folder()">
+                <span>When the User clicks on Add Folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_enters_the_folder_name_as_into()">
+                <span>And the User enters the folder name into Folder name field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_the_button()">
+                <span>And the User clicks on the Add button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_should_see_a_success_popup_with_the_message(java.lang.String)">
+                <span>Then the User should see a success popup with the message "added successfully"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_close_user_guide()">
+                <span>And the User clicks on close user guide</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_verifies_the_added_custom_folder()">
+                <span>And the User verifies the added custom folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_and_opens_the_folder()">
+                <span>And the User clicks and opens the folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.user_uploads_XLSX_into_the_that_specific_folder()">
+                <span>And User uploads XLSX file into the that specific folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="55"><span class="badge log fail-bg mr-2">Fail</span>Add a Custom Folder and Upload PNG Files of Small, Medium and Large init</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files()">
+                <span>Given the User clicks on Family Access Files</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']//span[contains(text(),'Family Access Files')]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.Pages.AddCustomFolder.clickOnFamilyAccessFiles(AddCustomFolder.java:54)
+	at parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files(AddCustomFolderSteps.java:38)
+	at ✽.the User clicks on Family Access Files(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/AddCustomFolder_Files.feature:63)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_add_folder()">
+                <span>When the User clicks on Add Folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_enters_the_folder_name_as_into()">
+                <span>And the User enters the folder name into Folder name field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_the_button()">
+                <span>And the User clicks on the Add button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_should_see_a_success_popup_with_the_message(java.lang.String)">
+                <span>Then the User should see a success popup with the message "added successfully"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_close_user_guide()">
+                <span>And the User clicks on close user guide</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_verifies_the_added_custom_folder()">
+                <span>And the User verifies the added custom folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_and_opens_the_folder()">
+                <span>And the User clicks and opens the folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.user_uploads_PNG_into_the_that_specific_folder()">
+                <span>And User uploads PNG file into the that specific folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="68"><span class="badge log fail-bg mr-2">Fail</span>Add a Custom Folder and Upload JPG Files of Small, Medium and Large init</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files()">
+                <span>Given the User clicks on Family Access Files</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']//span[contains(text(),'Family Access Files')]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.Pages.AddCustomFolder.clickOnFamilyAccessFiles(AddCustomFolder.java:54)
+	at parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files(AddCustomFolderSteps.java:38)
+	at ✽.the User clicks on Family Access Files(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/AddCustomFolder_Files.feature:76)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_add_folder()">
+                <span>When the User clicks on Add Folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_enters_the_folder_name_as_into()">
+                <span>And the User enters the folder name into Folder name field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_the_button()">
+                <span>And the User clicks on the Add button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_should_see_a_success_popup_with_the_message(java.lang.String)">
+                <span>Then the User should see a success popup with the message "added successfully"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_close_user_guide()">
+                <span>And the User clicks on close user guide</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_verifies_the_added_custom_folder()">
+                <span>And the User verifies the added custom folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_and_opens_the_folder()">
+                <span>And the User clicks and opens the folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.user_uploads_JPG_into_the_that_specific_folder()">
+                <span>And User uploads JPG file into the that specific folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="81"><span class="badge log fail-bg mr-2">Fail</span>Add a Custom Folder and Upload MP4 Files of Small, Medium and Large init</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files()">
+                <span>Given the User clicks on Family Access Files</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']//span[contains(text(),'Family Access Files')]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.Pages.AddCustomFolder.clickOnFamilyAccessFiles(AddCustomFolder.java:54)
+	at parallel.AddCustomFolderSteps.the_user_clicks_on_family_access_files(AddCustomFolderSteps.java:38)
+	at ✽.the User clicks on Family Access Files(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/AddCustomFolder_Files.feature:89)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_add_folder()">
+                <span>When the User clicks on Add Folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_enters_the_folder_name_as_into()">
+                <span>And the User enters the folder name into Folder name field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_the_button()">
+                <span>And the User clicks on the Add button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_should_see_a_success_popup_with_the_message(java.lang.String)">
+                <span>Then the User should see a success popup with the message "added successfully"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_on_close_user_guide()">
+                <span>And the User clicks on close user guide</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_verifies_the_added_custom_folder()">
+                <span>And the User verifies the added custom folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.the_user_clicks_and_opens_the_folder()">
+                <span>And the User clicks and opens the folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.AddCustomFolderSteps.user_uploads_MP4_into_the_that_specific_folder()">
+                <span>And User uploads MP4 file into the that specific folder</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="94"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">PersonalVault General Legal Information of Uploading Different file types</p>
+            <p class="text-sm">
+              <span>10:30:03 am</span> / <span>00:00:00:202</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">PersonalVault General Legal Information of Uploading Different file types</h5>
+<span class='badge badge-success'>04.12.2024 10:30:03 am</span>
+<span class='badge badge-danger'>04.12.2024 10:30:03 am</span>
+<span class='badge badge-default'>00:00:00:202</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=94</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="95"><span class="badge log fail-bg mr-2">Fail</span>General Legal upload PNG file upload</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.AccountsPageSteps.user_is_already_logged_in_to_application(io.cucumber.datatable.DataTable)">
+                <span>Given User is already logged in to application</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>ashokmarch12@yopmail.com</td><td>Password@123</td></tr></table>
+      </div>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, get {url=https://familycentral.com}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
+	at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:38)
+	at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/PersonalVault_GeneralLegal.feature:12)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault()">
+                <span>When User clicks on personal vault</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.PersonalVault_ShareUploadLinkSteps.user_navigates_to_smstome_website()">
+                <span>And User navigates to smstome website</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_general_legal_information()">
+                <span>When user clicks on general legal information</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_add_option()">
+                <span>And user clicks on add option</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_upload_file1()">
+                <span>And user clicks on upload file</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_should_see_the_message(java.lang.String)">
+                <span>Then User should see the "File Uploaded Successfully" Message</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="106"><span class="badge log fail-bg mr-2">Fail</span>General Legal upload PDF file upload</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault()">
+                <span>When User clicks on personal vault</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']/child::span[text()='Personal Vault']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.PersonalVault_ShareUploadLink.clickonPersonalvault(PersonalVault_ShareUploadLink.java:72)
+	at parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault(PersonalVault_ShareUploadLinkSteps.java:19)
+	at ✽.User clicks on personal vault(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/PersonalVault_GeneralLegal.feature:25)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_add_option()">
+                <span>And user clicks on add option</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_upload_file(int)">
+                <span>And user clicks on upload file1</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_should_see_the_message(java.lang.String)">
+                <span>Then User should see the "Uploaded Successfully" Message</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="114"><span class="badge log fail-bg mr-2">Fail</span>General Legal upload JPG file upload</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault()">
+                <span>When User clicks on personal vault</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']/child::span[text()='Personal Vault']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.PersonalVault_ShareUploadLink.clickonPersonalvault(PersonalVault_ShareUploadLink.java:72)
+	at parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault(PersonalVault_ShareUploadLinkSteps.java:19)
+	at ✽.User clicks on personal vault(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/PersonalVault_GeneralLegal.feature:34)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_add_option()">
+                <span>And user clicks on add option</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_upload_file(int)">
+                <span>And user clicks on upload file2</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_should_see_the_message(java.lang.String)">
+                <span>Then User should see the "Uploaded Successfully" Message</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="122"><span class="badge log fail-bg mr-2">Fail</span>General Legal upload XLSX file upload</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault()">
+                <span>When User clicks on personal vault</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']/child::span[text()='Personal Vault']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.PersonalVault_ShareUploadLink.clickonPersonalvault(PersonalVault_ShareUploadLink.java:72)
+	at parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault(PersonalVault_ShareUploadLinkSteps.java:19)
+	at ✽.User clicks on personal vault(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/PersonalVault_GeneralLegal.feature:43)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_add_option()">
+                <span>And user clicks on add option</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_upload_file(int)">
+                <span>And user clicks on upload file2</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_should_see_the_message(java.lang.String)">
+                <span>Then User should see the "Uploaded Successfully" Message</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="130"><span class="badge log fail-bg mr-2">Fail</span>General Legal upload JPEG file upload</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault()">
+                <span>When User clicks on personal vault</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']/child::span[text()='Personal Vault']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.PersonalVault_ShareUploadLink.clickonPersonalvault(PersonalVault_ShareUploadLink.java:72)
+	at parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault(PersonalVault_ShareUploadLinkSteps.java:19)
+	at ✽.User clicks on personal vault(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/PersonalVault_GeneralLegal.feature:52)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_add_option()">
+                <span>And user clicks on add option</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_upload_file(int)">
+                <span>And user clicks on upload file4</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_should_see_the_message(java.lang.String)">
+                <span>Then User should see the "Uploaded Successfully" Message</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="138"><span class="badge log fail-bg mr-2">Fail</span>General Legal upload TXT file upload</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault()">
+                <span>When User clicks on personal vault</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, findElement {using=xpath, value=//a[@class='nav-link']/child::span[text()='Personal Vault']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+	at com.Pages.PersonalVault_ShareUploadLink.clickonPersonalvault(PersonalVault_ShareUploadLink.java:72)
+	at parallel.PersonalVault_ShareUploadLinkSteps.user_clicks_on_personal_vault(PersonalVault_ShareUploadLinkSteps.java:19)
+	at ✽.User clicks on personal vault(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/dummyFeatures/PersonalVault_GeneralLegal.feature:61)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_general_legal_information()">
+                <span>When user clicks on general legal information</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_add_option()">
+                <span>And user clicks on add option</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_clicks_on_upload_file(int)">
+                <span>And user clicks on upload file5</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="parallel.GeneralLegalPage_PersonalVaultSteps.user_should_see_the_message(java.lang.String)">
+                <span>Then User should see the "Uploaded Successfully" Message</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [fe0aedc4-79f6-4c43-bc0d-3e02997e6936, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:22776, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12636, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22776/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe0aedc4-79f6-4c43-bc0d-3e02997e6936
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:45)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="147"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Google Search Page Title</p>
+            <p class="text-sm">
+              <span>10:30:03 am</span> / <span>00:00:00:002</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Google Search Page Title</h5>
+<span class='badge badge-success'>04.12.2024 10:30:03 am</span>
+<span class='badge badge-danger'>04.12.2024 10:30:03 am</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=147</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="148"><span class="badge log fail-bg mr-2">Fail</span>Verify Google Page Title</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given I am on the Google Search page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then the page title should be "Google"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="154"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Google Search</p>
+            <p class="text-sm">
+              <span>10:30:03 am</span> / <span>00:00:00:002</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Google Search</h5>
+<span class='badge badge-success'>04.12.2024 10:30:03 am</span>
+<span class='badge badge-danger'>04.12.2024 10:30:03 am</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=154</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="155"><span class="badge log fail-bg mr-2">Fail</span>Verify Google Title in Chrome</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given I open Google Chrome browser</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When I navigate to the Google homepage</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then I get the title of the page</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">14</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>13</span>
+</span>
+<p class="name">@feature</p>
+<p class="duration text-sm">13 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@feature</h4>
+<span status="fail" class='badge log badge-danger'>13 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:28:21 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Add a Custom Folder and Upload PDF Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload PDF Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='16'>Add a Custom Folder and Upload DOCX Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload DOCX Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Add a Custom Folder and Upload TXT Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload TXT Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='42'>Add a Custom Folder and Upload XLSX Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload XLSX Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='55'>Add a Custom Folder and Upload PNG Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload PNG Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='68'>Add a Custom Folder and Upload JPG Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload JPG Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='81'>Add a Custom Folder and Upload MP4 Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload MP4 Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='95'>General Legal upload PNG file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload PNG file upload</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='106'>General Legal upload PDF file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload PDF file upload</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='114'>General Legal upload JPG file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload JPG file upload</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='122'>General Legal upload XLSX file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload XLSX file upload</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='130'>General Legal upload JPEG file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload JPEG file upload</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='138'>General Legal upload TXT file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload TXT file upload</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag5</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag5</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='138'>General Legal upload TXT file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload TXT file upload</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag2</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag2</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='114'>General Legal upload JPG file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload JPG file upload</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag4</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag4</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='130'>General Legal upload JPEG file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload JPEG file upload</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@docx</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docx</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='16'>Add a Custom Folder and Upload DOCX Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload DOCX Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@xlsx</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@xlsx</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='42'>Add a Custom Folder and Upload XLSX Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload XLSX Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag0</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag0</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='95'>General Legal upload PNG file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload PNG file upload</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@jpg</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@jpg</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='68'>Add a Custom Folder and Upload JPG Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload JPG Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@txt</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@txt</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Add a Custom Folder and Upload TXT Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload TXT Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag1</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag1</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='106'>General Legal upload PDF file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload PDF file upload</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@png</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@png</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='55'>Add a Custom Folder and Upload PNG Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload PNG Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag3</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag3</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='122'>General Legal upload XLSX file upload</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload XLSX file upload</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@pdf</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@pdf</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:28:21 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Add a Custom Folder and Upload PDF Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload PDF Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@mp4</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@mp4</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='81'>Add a Custom Folder and Upload MP4 Files of Small, Medium and Large init</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload MP4 Files of Small, Medium and Large init</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.WebDriverException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.WebDriverException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:28:24 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='5'>Given User is already logged in to application</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload PDF Files of Small, Medium and Large init.Given User is already logged in to application</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>25</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchSessionException</p>
+<p class="duration text-sm">25 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchSessionException</h4>
+<span status="fail" class='badge log badge-danger'>25 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload PDF Files of Small, Medium and Large init.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Given the User clicks on Family Access Files</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload DOCX Files of Small, Medium and Large init.Given the User clicks on Family Access Files</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='28'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload DOCX Files of Small, Medium and Large init.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='32'>Given the User clicks on Family Access Files</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload TXT Files of Small, Medium and Large init.Given the User clicks on Family Access Files</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='41'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload TXT Files of Small, Medium and Large init.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='45'>Given the User clicks on Family Access Files</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload XLSX Files of Small, Medium and Large init.Given the User clicks on Family Access Files</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='54'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload XLSX Files of Small, Medium and Large init.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='58'>Given the User clicks on Family Access Files</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload PNG Files of Small, Medium and Large init.Given the User clicks on Family Access Files</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='67'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload PNG Files of Small, Medium and Large init.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='71'>Given the User clicks on Family Access Files</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload JPG Files of Small, Medium and Large init.Given the User clicks on Family Access Files</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='80'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload JPG Files of Small, Medium and Large init.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='84'>Given the User clicks on Family Access Files</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload MP4 Files of Small, Medium and Large init.Given the User clicks on Family Access Files</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='93'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Files Add Custom Folder and Uploading Files in it.Add a Custom Folder and Upload MP4 Files of Small, Medium and Large init.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='98'>Given User is already logged in to application</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload PNG file upload.Given User is already logged in to application</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='105'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload PNG file upload.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='109'>When User clicks on personal vault</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload PDF file upload.When User clicks on personal vault</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='113'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload PDF file upload.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='117'>When User clicks on personal vault</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload JPG file upload.When User clicks on personal vault</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='121'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload JPG file upload.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='125'>When User clicks on personal vault</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload XLSX file upload.When User clicks on personal vault</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='129'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload XLSX file upload.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='133'>When User clicks on personal vault</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload JPEG file upload.When User clicks on personal vault</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='137'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload JPEG file upload.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='141'>When User clicks on personal vault</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload TXT file upload.When User clicks on personal vault</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:30:03 am</td>
+<td>
+<a href="#" class="linked" test-id='94' id='146'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">PersonalVault General Legal Information of Uploading Different file types.General Legal upload TXT file upload.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

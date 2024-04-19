@@ -32,7 +32,7 @@ public class LegacyVideoRecordSteps {
     }
 
     @When("the user clicks on Create your first message button")
-    public void whenTheUserClicksOnCreateYourFirstMessageButton() {
+    public void whenTheUserClicksOnCreateYourFirstMessageButton() throws InterruptedException {
         legacyMessagePage.clickCreateFirstMessage();
     }
     
@@ -45,9 +45,19 @@ public class LegacyVideoRecordSteps {
     public void whenTheUserClicksOnRecordVideoMessageButton() {
         legacyMessagePage.clickRecordVideoMessage();
     }
+    
+    @When("the user clicks on Record Audio message button")
+    public void RecordAudioMessage() {
+        legacyMessagePage.clickRecordAudioMessage();
+    }
+    
+    @When("the user clicks on start recording button")
+    public void RecordAudioStartButton() {
+        legacyMessagePage.clickRecordAudioStart();
+    }
 
     @When("the user clicks on Record now button")
-    public void whenTheUserClicksOnRecordNowButton() {
+    public void whenTheUserClicksOnRecordNowButton() throws InterruptedException {
         legacyMessagePage.clickRecordNow();
     }
 
@@ -134,8 +144,8 @@ public class LegacyVideoRecordSteps {
     		legacyMessagePage.selectRandomMonth();
     	}
     	@When("the user selects random day")
-    	public void the_user_selects_random_day() {
-    		legacyMessagePage.selectRandomYear();
+    	public void the_user_selects_random_day() throws InterruptedException {
+    		legacyMessagePage.selectRandomEnabledDayFromDropdown();
     	}
 
 

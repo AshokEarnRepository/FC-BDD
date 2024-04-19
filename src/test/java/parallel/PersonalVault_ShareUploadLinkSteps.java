@@ -28,9 +28,11 @@ public class PersonalVault_ShareUploadLinkSteps {
     }
 
     @When("User shares an email")
-    public void user_shares_an_email() {
+    public void user_shares_an_email() throws InterruptedException {
     	System.out.println(">>>Feature: Personal Vault Share Upload");
 
+    	personalVaultPage.sharefile();
+    	
     	personalVaultPage.firstname();
     	personalVaultPage.lastname();
     	personalVaultPage.email();
@@ -50,7 +52,8 @@ public class PersonalVault_ShareUploadLinkSteps {
     }
 
     @Then("User navigates to the yopmail and opens the website")
-    public void user_navigates_to_the_yopmail_and_opens_the_website() {
+    public void user_navigates_to_the_yopmail_and_opens_the_website() throws InterruptedException {
+    	
         personalVaultPage.yopmail();
     }
 
@@ -58,8 +61,9 @@ public class PersonalVault_ShareUploadLinkSteps {
     public void user_opens_the_email_and_signs_in() throws Throwable {
         personalVaultPage.enteremail();
         personalVaultPage.click();
-        personalVaultPage.frame();
         personalVaultPage.emaillink();
+        personalVaultPage.frame();
+        
         personalVaultPage.signin();
     }
 

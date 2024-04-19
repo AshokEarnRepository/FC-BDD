@@ -1,6 +1,7 @@
 Feature: Account Menu Functionality
 
 
+@Regression
 Scenario: Account Menu Functionality of pwd change and Executor and Emergency contact
 
 Given User is already logged in to application

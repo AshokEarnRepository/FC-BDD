@@ -4,9 +4,9 @@ Feature: Files Add Custom Folder and Uploading Files in it
   @pdf
   Scenario: Add a Custom Folder and Upload PDF Files of Small, Medium and Large init
   
-  #Given User is already logged in to application
-  #|username            |password    |
-  #|ashokmarch12@yopmail.com|Password@123|
+  Given User is already logged in to application
+  |username            |password    |
+  |ashokmarch12@yopmail.com|Password@123|
   
     Given the User clicks on Family Access Files
     When the User clicks on Add Folder

@@ -4,7 +4,7 @@ Feature: Advisor Invitation Flow
 
   #Background: 
   
-
+@Regression
   Scenario: Complete Advisor Invitation Flow
   
   Given User is already logged in to application

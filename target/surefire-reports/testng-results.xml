@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="1" failed="10" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-19T15:47:41 IST" name="Surefire suite" finished-at="2024-04-19T15:51:49 IST" duration-ms="247503">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.FeatureRunner@22fcf7ab]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.MyTestRunner@707194ba]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@6ab778a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-04-19T15:47:41 IST" name="Surefire test" finished-at="2024-04-19T15:51:49 IST" duration-ms="247503">
+      <class name="testRunners.FeatureRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunners.FeatureRunner@22fcf7ab]" started-at="2024-04-19T15:47:41 IST" name="setUpClass" finished-at="2024-04-19T15:47:43 IST" duration-ms="1981" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7be9b8d0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.FeatureRunner@22fcf7ab]" started-at="2024-04-19T15:47:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:48:22 IST" duration-ms="38727" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a Custom Folder and Upload PDF Files of Small, Medium and Large init"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["File Management Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[Element <p class="mb-0 file_length"> could not be scrolled into view
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d, clickElement {id=983f8b1e-2034-4ce3-a1df-62810997e0e6}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d)] -> xpath: //p[@class='mb-0 file_length' and text()='t5QEZ386_Ashok']]
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <p class="mb-0 file_length"> could not be scrolled into view
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d, clickElement {id=983f8b1e-2034-4ce3-a1df-62810997e0e6}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d)] -> xpath: //p[@class='mb-0 file_length' and text()='t5QEZ386_Ashok']]
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at com.Pages.AddCustomFolder.clickOnAddedFolder(AddCustomFolder.java:108)
+at parallel.AddCustomFolderSteps.the_user_clicks_and_opens_the_folder(AddCustomFolderSteps.java:84)
+at ✽.the User clicks and opens the folder(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:19)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.FeatureRunner@22fcf7ab]" started-at="2024-04-19T15:48:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:48:46 IST" duration-ms="24537" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a Custom Folder and Upload DOCX Files of Small, Medium and Large init"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["File Management Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='login-email'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='login-email'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.FeatureRunner@22fcf7ab]" started-at="2024-04-19T15:48:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:49:10 IST" duration-ms="24067" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a Custom Folder and Upload TXT Files of Small, Medium and Large init"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["File Management Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='login-email'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='login-email'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.FeatureRunner@22fcf7ab]" started-at="2024-04-19T15:49:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:49:34 IST" duration-ms="23924" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a Custom Folder and Upload XLSX Files of Small, Medium and Large init"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["File Management Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='login-email'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='login-email'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.FeatureRunner@22fcf7ab]" started-at="2024-04-19T15:49:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:50:56 IST" duration-ms="82043" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a Custom Folder and Upload PNG Files of Small, Medium and Large init"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["File Management Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[text()='Log In'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[text()='Log In'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+at com.Pages.LoginPage.doLogin(LoginPage.java:76)
+at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.FeatureRunner@22fcf7ab]" started-at="2024-04-19T15:50:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:51:22 IST" duration-ms="25560" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a Custom Folder and Upload JPG Files of Small, Medium and Large init"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["File Management Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='login-email'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='login-email'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.FeatureRunner@22fcf7ab]" started-at="2024-04-19T15:51:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:51:47 IST" duration-ms="24609" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a Custom Folder and Upload MP4 Files of Small, Medium and Large init"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["File Management Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='login-email'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='login-email'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:37638, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3576, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:37638/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5b9c9afa-cd2a-4db4-9af1-0e2e8293ca9d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.qa.Utils.WebDriverWaits.waitForElementToBeClickable(WebDriverWaits.java:36)
+at com.Pages.LoginPage.doLogin(LoginPage.java:78)
+at parallel.AccountsPageSteps.user_is_already_logged_in_to_application(AccountsPageSteps.java:41)
+at ✽.User is already logged in to application(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/parallel/AddCustomFolder.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunners.FeatureRunner@22fcf7ab]" started-at="2024-04-19T15:51:47 IST" name="tearDownClass" finished-at="2024-04-19T15:51:49 IST" duration-ms="1998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunners.FeatureRunner -->
+      <class name="testRunners.ParallelRunTest">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunners.ParallelRunTest@6ab778a]" started-at="2024-04-19T15:47:41 IST" name="setUpClass" finished-at="2024-04-19T15:47:43 IST" duration-ms="1888" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7be9b8d0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testRunners.ParallelRunTest@6ab778a]" started-at="2024-04-19T15:47:43 IST" name="setUp" finished-at="2024-04-19T15:47:43 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@6ab778a]" started-at="2024-04-19T15:47:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:48:27 IST" duration-ms="44301" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Account Menu Functionality of pwd change and Executor and Emergency contact"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Account Menu Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[Element <a class="nav-link" href="#passwordSecurity"> could not be scrolled into view
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [75b6679e-071a-4c39-81c9-bdc6b330a656, clickElement {id=40d13421-8024-4796-bed7-4b72c8991272}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:20854, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18140, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:20854/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (75b6679e-071a-4c39-81c9-bdc6b330a656)] -> xpath: //a[contains(text(),'Password & Security')]]
+Session ID: 75b6679e-071a-4c39-81c9-bdc6b330a656]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <a class="nav-link" href="#passwordSecurity"> could not be scrolled into view
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [75b6679e-071a-4c39-81c9-bdc6b330a656, clickElement {id=40d13421-8024-4796-bed7-4b72c8991272}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:20854, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18140, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:20854/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (75b6679e-071a-4c39-81c9-bdc6b330a656)] -> xpath: //a[contains(text(),'Password & Security')]]
+Session ID: 75b6679e-071a-4c39-81c9-bdc6b330a656
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at com.Pages.accountmenupage.password(accountmenupage.java:114)
+at parallel.AccountmenuSteps.user_clicks_on_password(AccountmenuSteps.java:38)
+at ✽.user clicks on Password(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountMenu.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@6ab778a]" started-at="2024-04-19T15:48:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:48:28 IST" duration-ms="308" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Accounts page title"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Account Page feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.Pages.AccountsPage.getAccountsPageTitle()" because "this.accountspage" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.Pages.AccountsPage.getAccountsPageTitle()" because "this.accountspage" is null
+at parallel.AccountsPageSteps.user_is_on_accounts_page(AccountsPageSteps.java:48)
+at ✽.User is on Accounts page(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountPage.feature:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@6ab778a]" started-at="2024-04-19T15:48:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:48:28 IST" duration-ms="601" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Accounts section count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Account Page feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.Pages.AccountsPage.getAccountsSectionsList()" because "this.accountspage" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.Pages.AccountsPage.getAccountsSectionsList()" because "this.accountspage" is null
+at parallel.AccountsPageSteps.user_gets_account_section(AccountsPageSteps.java:59)
+at ✽.user gets account section(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountPage.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@6ab778a]" started-at="2024-04-19T15:48:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-19T15:48:36 IST" duration-ms="7338" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Adding Calendar MileStone of Birthday"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["login page feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunners.ParallelRunTest@6ab778a]" started-at="2024-04-19T15:48:36 IST" name="tearDown" finished-at="2024-04-19T15:48:36 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunners.ParallelRunTest@6ab778a]" started-at="2024-04-19T15:48:36 IST" name="tearDownClass" finished-at="2024-04-19T15:48:43 IST" duration-ms="7607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunners.ParallelRunTest -->
+      <class name="testRunners.MyTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunners.MyTestRunner@707194ba]" started-at="2024-04-19T15:47:41 IST" name="setUpClass" finished-at="2024-04-19T15:47:42 IST" duration-ms="492" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7be9b8d0]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[path must exist: C:\Users\Ashok\eclipse-workspace\FamilyCentral_ProdCucumber\src\test\resources\features\dummyFeatures\google_search.feature]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: path must exist: C:\Users\Ashok\eclipse-workspace\FamilyCentral_ProdCucumber\src\test\resources\features\dummyFeatures\google_search.feature
+at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:49)
+at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
+at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
+at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
+at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
+at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
+at io.cucumber.testng.TestNGCucumberRunner.<init>(TestNGCucumberRunner.java:122)
+at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testRunners.MyTestRunner@707194ba]" started-at="2024-04-19T15:47:42 IST" name="setUp" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1713521862212" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
+
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunners.MyTestRunner@707194ba]" started-at="2024-04-19T15:47:42 IST" name="tearDownClass" finished-at="2024-04-19T15:47:42 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunners.MyTestRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

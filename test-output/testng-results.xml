@@ -1,131 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-28T16:48:22 IST" name="Default suite" finished-at="2024-03-28T16:49:06 IST" duration-ms="44135">
+  <suite started-at="2024-04-12T10:54:05 IST" name="Default suite" finished-at="2024-04-12T10:55:01 IST" duration-ms="55411">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-03-28T16:48:22 IST" name="Default test" finished-at="2024-03-28T16:49:06 IST" duration-ms="44135">
+    <test started-at="2024-04-12T10:54:05 IST" name="Default test" finished-at="2024-04-12T10:55:01 IST" duration-ms="55411">
       <class name="testRunners.ParallelRunTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-03-28T16:48:22 IST" name="setUpClass" finished-at="2024-03-28T16:48:22 IST" duration-ms="632" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-04-12T10:54:05 IST" name="setUpClass" finished-at="2024-04-12T10:54:06 IST" duration-ms="673" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2a984952]]>
+                <![CDATA[org.testng.TestRunner@2cebf82f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-03-28T16:48:22 IST" name="setUp" finished-at="2024-03-28T16:48:22 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-04-12T10:54:06 IST" name="setUp" finished-at="2024-04-12T10:54:06 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-03-28T16:48:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-28T16:48:54 IST" duration-ms="31825" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-04-12T10:54:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T10:54:46 IST" duration-ms="40571" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["General Legal upload PNG file upload"]]>
+                <![CDATA["Account Menu Functionality of pwd change and Executor and Emergency contact"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["PersonalVault General Legal Information of Uploading Different file types"]]>
+                <![CDATA["Account Menu Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[Element <a class="nav-link" href="#passwordSecurity"> could not be scrolled into view
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [483823f3-a82d-4802-b883-5459418a8688, clickElement {id=c3a36705-01ff-4a87-a3e0-8d9a72ce6a98}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:44999, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11128, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:44999/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (483823f3-a82d-4802-b883-5459418a8688)] -> xpath: //a[contains(text(),'Password & Security')]]
+Session ID: 483823f3-a82d-4802-b883-5459418a8688]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <a class="nav-link" href="#passwordSecurity"> could not be scrolled into view
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [483823f3-a82d-4802-b883-5459418a8688, clickElement {id=c3a36705-01ff-4a87-a3e0-8d9a72ce6a98}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.2, moz:accessibilityChecks: false, moz:buildID: 20240401114208, moz:debuggerAddress: 127.0.0.1:44999, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11128, moz:profile: C:\Users\Ashok\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:44999/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (483823f3-a82d-4802-b883-5459418a8688)] -> xpath: //a[contains(text(),'Password & Security')]]
+Session ID: 483823f3-a82d-4802-b883-5459418a8688
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at com.Pages.accountmenupage.password(accountmenupage.java:114)
+at parallel.AccountmenuSteps.user_clicks_on_password(AccountmenuSteps.java:38)
+at ✽.user clicks on Password(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountMenu.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-04-12T10:54:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T10:54:47 IST" duration-ms="212" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Accounts page title"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Account Page feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.Pages.AccountsPage.getAccountsPageTitle()" because "this.accountspage" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.Pages.AccountsPage.getAccountsPageTitle()" because "this.accountspage" is null
+at parallel.AccountsPageSteps.user_is_on_accounts_page(AccountsPageSteps.java:48)
+at ✽.User is on Accounts page(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountPage.feature:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-04-12T10:54:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T10:54:47 IST" duration-ms="516" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Accounts section count"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Account Page feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.Pages.AccountsPage.getAccountsSectionsList()" because "this.accountspage" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.Pages.AccountsPage.getAccountsSectionsList()" because "this.accountspage" is null
+at parallel.AccountsPageSteps.user_gets_account_section(AccountsPageSteps.java:59)
+at ✽.user gets account section(file:///C:/Users/Ashok/eclipse-workspace/FamilyCentral_ProdCucumber/src/test/resources/AllRunFeatures/AccountPage.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-04-12T10:54:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T10:54:54 IST" duration-ms="7265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Adding Calendar MileStone of Birthday"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["login page feature"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-03-28T16:48:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-28T16:48:56 IST" duration-ms="1462" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["General Legal upload PDF file upload"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["PersonalVault General Legal Information of Uploading Different file types"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-03-28T16:48:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-28T16:48:57 IST" duration-ms="1484" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["General Legal upload JPG file upload"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["PersonalVault General Legal Information of Uploading Different file types"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-03-28T16:48:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-28T16:48:59 IST" duration-ms="1430" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["General Legal upload XLSX file upload"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["PersonalVault General Legal Information of Uploading Different file types"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-03-28T16:48:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-28T16:49:00 IST" duration-ms="1356" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["General Legal upload JPEG file upload"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["PersonalVault General Legal Information of Uploading Different file types"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-03-28T16:49:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-28T16:49:01 IST" duration-ms="1405" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["General Legal upload TXT file upload"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["PersonalVault General Legal Information of Uploading Different file types"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-03-28T16:49:01 IST" name="tearDown" finished-at="2024-03-28T16:49:01 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-04-12T10:54:54 IST" name="tearDown" finished-at="2024-04-12T10:54:54 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-03-28T16:49:01 IST" name="tearDownClass" finished-at="2024-03-28T16:49:06 IST" duration-ms="4494" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunners.ParallelRunTest@4bdeaabb]" started-at="2024-04-12T10:54:54 IST" name="tearDownClass" finished-at="2024-04-12T10:55:01 IST" duration-ms="6123" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

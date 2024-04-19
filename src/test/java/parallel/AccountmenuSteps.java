@@ -34,7 +34,7 @@ public class AccountmenuSteps {
 	}
 
 	@Then("user clicks on Password")
-	public void user_clicks_on_password() {
+	public void user_clicks_on_password() throws InterruptedException {
 		accountmenupage.password();
 	}
 

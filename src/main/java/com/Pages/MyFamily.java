@@ -106,16 +106,21 @@ public class MyFamily {
 	    	
 	    }
 
-	    public void clickOnSendInvite() {
+	    public void clickOnSendInvite() throws InterruptedException {
 	        wait.waitForElementToBeClickable(SENDINVITE_BTN);
 	        driver.findElement(SENDINVITE_BTN).click();
+	        Thread.sleep(2000);
 	    }
 
-	    public void verifyInviteSentMessage() {
+	    public void verifyInviteSentMessage() throws InterruptedException {
 	       WebElement message = wait.waitForPresenceOfElement(INVITE_SENT_MESSAGE);
+	       Thread.sleep(3000);
 	       System.out.println(message);
 	        // You may want to assert the message content or do additional verification
-	       wait.waitForElementToBeClickable(By.xpath("//span[@class='account_menu d-none d-md-inline-block']")).click();
+	       Thread.sleep(5000);
+	       WebElement accountmenu = wait.waitForElementToBeClickable(By.xpath("//span[@class='account_menu d-none d-md-inline-block']"));
+	       
+	       accountmenu.click();
 	       wait.waitForElementToBeClickable(By.xpath("//span[text()='Log Out']")).click();
 	       
 	       
@@ -163,8 +168,11 @@ public class MyFamily {
 	        // Implement steps to join your family...
 	    	
 	    	Thread.sleep(5000);
-	    	driver.findElement(JOIN_YOUR_FAMILY_BTN).click();
-	        
+	    	WebElement ele = wait.waitForElementToBeClickable(JOIN_YOUR_FAMILY_BTN);
+	    	ele.isDisplayed();
+	    	ele.isEnabled();
+	    	
+	        ele.click();
 	        // Locate the element you want to click
 //	        WebElement joinFamily = wait.waitForPresenceOfElement(JOIN_YOUR_FAMILY_BTN);
 //

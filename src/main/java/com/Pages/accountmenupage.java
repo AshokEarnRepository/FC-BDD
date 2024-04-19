@@ -107,9 +107,10 @@ public class accountmenupage {
 
 
  
-		public void password() {
+		public void password() throws InterruptedException {
 		    try {
 		        WebElement passwordElement = wait.until(ExpectedConditions.elementToBeClickable(password));
+		        Thread.sleep(3000);
 		        passwordElement.click();
 		    } catch (ElementClickInterceptedException e) {
 		        // If element click is intercepted, try scrolling into view and clicking again

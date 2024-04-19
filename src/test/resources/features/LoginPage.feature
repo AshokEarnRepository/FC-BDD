@@ -1,13 +1,13 @@
 #@feature
 Feature: login page feature
   
-  
+  @Regression
   Scenario: Login page title
 
     Given user is on landing page
     When user gets the title of the page
     
- @login
+ @login @Regression
   Scenario: Login with valid credentials
     
     Given user is on landing page

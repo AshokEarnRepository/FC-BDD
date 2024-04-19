@@ -3,7 +3,7 @@ Feature: Verify DashBoard Let's get started Section
 
  #Background: 
 
-
+@Regression
   Scenario: Verify Lets get started Section and perform actions
     
   Given User is already logged in to application

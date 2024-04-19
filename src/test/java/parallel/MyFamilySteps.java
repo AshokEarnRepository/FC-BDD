@@ -87,14 +87,14 @@ public class MyFamilySteps {
 
 
     @And("User Clicks on Send Invite")
-    public void user_clicks_on_send_invite() {
+    public void user_clicks_on_send_invite() throws InterruptedException {
         // Click on Send Invite
         myFamilyPage.clickOnSendInvite();
         
     }
 
     @Then("User Should see the \"Invite has been sent to email\" Message")
-    public void user_should_see_invite_sent_message() {
+    public void user_should_see_invite_sent_message() throws InterruptedException {
         myFamilyPage.verifyInviteSentMessage();
        
     }

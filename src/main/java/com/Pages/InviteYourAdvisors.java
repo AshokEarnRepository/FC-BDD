@@ -129,16 +129,37 @@ public class InviteYourAdvisors {
         driver.switchTo().frame(iframeElement);
     }
 
+	/*
+	 * public void clickOnSignUpNow() throws InterruptedException { WebElement
+	 * signUP = waitUtil.waitForVisibilityOfElement(yopmailSignUpNow);
+	 * scroll.scrollToElement(signUP); signUP.click(); Thread.sleep(5000); AcceptUrl
+	 * =driver.getCurrentUrl();
+	 * 
+	 * String mainWindowHandle = driver.getWindowHandle();
+	 * System.out.println("Main Window Handle: " + mainWindowHandle); }
+	 */
+    
     public void clickOnSignUpNow() throws InterruptedException {
-        WebElement signUP = waitUtil.waitForVisibilityOfElement(yopmailSignUpNow);
-        scroll.scrollToElement(signUP);
-         signUP.click();
-         Thread.sleep(5000);
-//         AcceptUrl  =driver.getCurrentUrl();
-         
-         String mainWindowHandle = driver.getWindowHandle();
-         System.out.println("Main Window Handle: " + mainWindowHandle);
+        // Find the sign-up button element
+        WebElement signUpButton = waitUtil.waitForVisibilityOfElement(yopmailSignUpNow);
+        // Scroll to the sign-up button
+        scroll.scrollToElement(signUpButton);
+        // Click on the sign-up button
+        signUpButton.click();
+        // Wait for a brief moment for the new window to open
+        Thread.sleep(5000);
+        
+        // Store the URL of the new window
+        AcceptUrl = driver.getCurrentUrl();
+        
+        // Store the main window handle
+        String mainWindowHandle = driver.getWindowHandle();
+        System.out.println("Main Window Handle: " + mainWindowHandle);
+        
+        // Close the current window
+        driver.close();
     }
+
 
     public void acceptInvite() throws InterruptedException {
     	  
@@ -147,12 +168,16 @@ public class InviteYourAdvisors {
         System.out.println("List of Window Handles: " + windowHandles);
         // Iterate through the handles and switch to each window
         for (String handle : windowHandles) {
+        	System.out.println(">> window handles : "+handle);
+        	
             driver.switchTo().window(handle);
             System.out.println("Switched to Window with Handle: " + handle);
          // Check if it's the new window (you may want to customize this condition)
             if (driver.getCurrentUrl().equals("about:blank")) {
             	
             	driver.get(AcceptUrl);
+            }else {
+            	System.out.println("Could not able to perform the action above");
             }
         } 
 

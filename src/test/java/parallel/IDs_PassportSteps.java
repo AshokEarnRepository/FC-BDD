@@ -26,15 +26,49 @@ public class IDs_PassportSteps {
 	    public void user_clicks_on_ids() throws InterruptedException {
 	        passport.clickOnIDs();
 	    }
+	    
+	    @When("clicks on the Birth certificate")
+	    public void user_clicks_on_Birth() throws InterruptedException {
+	        passport.clickOnBirthDay();
+	    }
 
 	    @When("User selects the subscriber")
 	    public void user_selects_the_subscriber() {
 	        passport.clickOnSubscriber();
 	    }
+	    @When("user clicks on the Driving license")
+	    public void user_selects_the_Driving() throws InterruptedException {
+	        passport.clickOnDrivingLicense();
+	    }
 
+	    @When("user clicks on the Finance")
+	    public void user_selects_the_Finance() throws InterruptedException {
+	        passport.clickOnFinance();
+	    }
+	    
 	    @When("User selects the passport folder")
 	    public void user_selects_the_passport_folder() {
 	        passport.clickOnPassportFolder();
+	    }
+	    
+	    
+	    @When("clicks on the MilitaryID certificate")
+	    public void user_clicks_on_the_MilitaryID() throws InterruptedException {
+	        passport.clickOnMilitaryIDFolder();
+	    }
+	    
+	    @When("user clicks on the SocialsecuirityCard")
+	    public void user_clicks_on_the_SocialsecuirityCard() throws InterruptedException {
+	        passport.clickOnSocialSecurityCard();
+	    }
+	    @When("user clicks on the TravelersID")
+	    public void user_clicks_on_the_TravelersID() throws InterruptedException {
+	        passport.clickOnTravelersID();
+	    }
+	    
+	    @When("user clicks on the PetWalletID")
+	    public void user_clicks_on_the_PetWalletID() throws InterruptedException {
+	        passport.clickOnPetWalletID();
 	    }
 
 	    @When("User clicks on the Add button")
@@ -52,8 +86,21 @@ public class IDs_PassportSteps {
 	    	
 	    		   passport.clickOnScanPopUp_upload();
 	    }
+	    
+	    @When("User uploads the Birth Certificate file into the Birth folder")
+	    public void user_uploads_the_file_into_the_Birth_folder() throws InterruptedException {
+	    	
+	    		   passport.clickOnScanPopUp_upload();
+	    }
+	    
+	    @When("User uploads the Invoice file into the Invoice folder")
+	    public void user_uploads_the_file_into_the_Invoice_folder() throws InterruptedException {
+	    	
+	    		   passport.clickOnScanPopUp_upload();
+	    }
+	    
 	    @When("User should see the success toast message")
-	    public void UserShouldSeeTheSuccuss() {
+	    public void UserShouldSeeTheSuccuss() throws InterruptedException {
 	        passport.verifySuccessToast();
 	    }
 	    
